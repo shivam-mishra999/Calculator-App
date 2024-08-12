@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, TextInput, TouchableOpacity, Text, Image, ScrollView } from 'react-native';
+import { View, TextInput, TouchableOpacity, Text, Image, ScrollView, StatusBar } from 'react-native';
 import ShivamImage from './assets/Shivam.jpg';
 import CloudImage from './assets/CloudImage.png';
 import styles from './styles';
@@ -26,9 +26,10 @@ const Calculator = () => {
     showsVerticalScrollIndicator={false}
     showsHorizontalScrollIndicator={false}
     >
-      {/* <View style={styles.headingWrapper}>
+      <StatusBar backgroundColor='pink' barStyle={'dark-content'} />
+      <View style={styles.headingWrapper}>
         <Text style={styles.heading}>Calculator by Shivam</Text>
-      </View> */}
+      </View>
       <TextInput style={styles.input} value={input} />
 
       <View style={styles.btnWrapper}>
